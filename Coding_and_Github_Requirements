@@ -1,0 +1,26 @@
+1)	Codes for loading a dataset and for performing training and testing must be on the github repo and must be commented. All the python code should be .py files and not .ipynb Jupyter notebooks.
+2)	Separate python files (.py) for training, for testing, for each model and for saving traced or scripted model for loading into Android Studio. The training and testing code must be written to be executed directly using commands such as:
+python train.py and python test.py from the command-line.
+3)	A clear README.md is required with instructions for running your code. Please see the following sample: https://gist.github.com/ahanagemini/63fdbc7f91dd2b1f9e735c0b95f6d7da
+4)	All code must have proper and consistent indentation, naming style, comments.
+5)	You will also check in your Android Studio code. Make sure that code is also clean. You need to check in your entire Android Studio app. You will be graded on the presence and correctness of important files, the entire app code structure, MainActivity.java functionality, and mapping of class ID to classes.
+6)	You must put all your python code under the ‘codes’ directory on your github repo and the Android Studio Project should be a separate directory. Please note, this means there should be just two separate directories in the same repository. 
+7)	Any team putting code under two separate repositories will be penalized. I will only be looking into one repository and one branch for each team. Besides, please note that you are creating a github repository and NOT a github project.
+8)	Make sure code for saving a model for use in pytorch is in the train.py code and loading a model is in the test.py code in the repository on github.
+9)	Make sure the separate *.py script for saving a model in a format that can be loaded in Android Studio is also there in the repo. This should contain python code, not model weights.
+10)	To get a B:
+  a.	Code must be properly commented and have docstrings for the file and each function. 
+  b.	You need to divide the codes into functions.
+  c.	Do not write code like a script. I want to see separate functions in each file. Mostly, each function should be less than 75 lines. You will be graded on how well you divide your code into functions.
+  d.	Write doc-strings to specify what the function does. How to Write Proper Docstrings for a Python Function | by Yong Cui | Feb, 2022 | Better Programming
+  e.	Compute the metrics mentioned above for each super-class and have this code in the test.py file.
+11)	To get an A: 
+  a.	The use of arguments for passing values to the training code is necessary. 
+  b.	Use if __name__ ==” __main__”: to make sure the user can use the name of the file to run the code in a .py file.  This is a requirement for the training and the testing .py files.
+  c.	You should use command-line arguments for things like number of epochs, learning rate batch size, and type of model. Besides, use command-line arguments to select whether training will use class (100 classes) or super-class (20 super-classes) as ground truth. Please use argparse or docopt for these. argparse — Parser for command-line options, arguments and sub-commands — Python 3.10.2 documentation or docopt · PyPI. You should be passing the arguments as flags. Eg: python train.py --num-epochs=200  --lr=0.005 
+--num_classes=20
+  d.	Design and implement the above mentioned linear model and include that model’s code in your repository.
+  e.	Include code for training using super-class and class allowing the selection of which of these two ground truths will be used by utilizing the command-line arguments.
+  f.	Testing code should also use command-line argument to decide whether the loaded model should be evaluated only for super-class metrics (if the model was only trained on the super-class) or both super-class and class metrics (if model was trained with the classes as the ground truths). Besides, you need command-line arguments to select the type of model to be loaded, the path from which to load the trained model weights.
+12)	Code for all the training and testing requirements mentioned above must be on the github repo
+13)	Any code that is not checked in on github before 11:59 pm on April 26 will not be graded and will not contribute to your final grades.

@@ -1,0 +1,14 @@
+{
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["-f1", "model_cnn_20240401-1754_eps-15_lr-5_nc-20", "-d"]
+        }
+    ]
+}

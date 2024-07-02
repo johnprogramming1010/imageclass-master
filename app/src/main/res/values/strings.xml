@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">LoadImage</string>
+    <string name="select_image">Select Image</string>
+</resources>
